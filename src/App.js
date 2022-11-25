@@ -1,32 +1,35 @@
 import {BrowserRouter as Router, Routes, Route, Outlet} from "react-router-dom"
 import PreviousRides from "./components/routes/user/PreviousRides";
 import RideDetails from "./components/routes/user/RideDetails";
-import Home from "./components/Home"
 import DriverDashboard from "./components/routes/driver/DriverDashboard";
 import UserDashboard from "./components/routes/user/UserDashboard";
 import UserProfile from "./components/routes/user/UserProfile";
 
+import Home from "./components/Home"
+import LaunchPage from "./components/LaunchPage"
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* In app.js
      <RideDetails/>
      ------------
      <PreviousRides/> */}
 
+    {/* Learn about order of routing */}
+    
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="user" element={<UserDashboard/>} >
-                <Route path="bookride" element={<RideDetails />} />
-                <Route path="previousrides" element={<PreviousRides />} />
-                <Route path="userprofile" element={<UserProfile />} />
-                
-            </Route>
-            <Route path="driver" element={<DriverDashboard/>}>
+          <Route path="/home" element={<Home/>} />
+              <Route path="/user" element={<UserDashboard/>} />
+                <Route path="/user/bookride" element={<RideDetails />} />
+                <Route path="/user/previousrides" element={<PreviousRides />} />
+                <Route path="/user/userprofile" element={<UserProfile />} />  
+         
+            <Route path="/driver" element={<DriverDashboard/>}>
             </Route>
 
+          <Route path="/" element={<LaunchPage/>}>
           </Route>
         </Routes>
       </Router>
