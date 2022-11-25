@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes, Route, Outlet} from "react-router-dom"
+import PreviousRides from "./components/routes/user/PreviousRides";
+import RideDetails from "./components/routes/user/RideDetails";
+import Home from "./components/Home"
+import DriverDashboard from "./components/routes/driver/DriverDashboard";
+import UserDashboard from "./components/routes/user/UserDashboard";
+import UserProfile from "./components/routes/user/UserProfile";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* In app.js
+     <RideDetails/>
+     ------------
+     <PreviousRides/> */}
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="user" element={<UserDashboard/>} >
+                <Route path="bookride" element={<RideDetails />} />
+                <Route path="previousrides" element={<PreviousRides />} />
+                <Route path="userprofile" element={<UserProfile />} />
+                
+            </Route>
+            <Route path="driver" element={<DriverDashboard/>}>
+            </Route>
+
+          </Route>
+        </Routes>
+      </Router>
+
+    
     </div>
   );
 }
