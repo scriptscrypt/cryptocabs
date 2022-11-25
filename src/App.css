@@ -8,6 +8,12 @@
   justify-content:center;
   align-items:center;
 }
+.btn{
+  padding:8px 16px;
+  border-radius: 8px;
+  background-color: orange;
+  width: fit-content;
+}
 /* Navbar CSS styles  */
 
 .Nav {
@@ -37,18 +43,16 @@
   }
 
   .linkDivLaunch{
-    
+    padding:8px 16px;
     border-radius: 8px;
     background-color: orange;
+    width: fit-content;
   }
   .linkLaunch{
     text-decoration: none;
     color:#404040;
   } 
-  .App {
-    height: 60px;
-  }
-  
+ 
   /*Nav1 css styles */
   
   .navWrapper {
@@ -73,20 +77,19 @@
   .nav-item {
     padding-left: 25px;
   }
+  .nav-item:hover{
+    cursor: pointer;
+  }
   .nav-item1 {
-    padding-left: 15px;
+    padding: 0px 15px ;
     display: flex;
-    background-color: burlywood;
-    padding-right: 15px;
+    background-color: rgb(252, 228, 195);
     border-radius: 10px;
-    padding-inline: 20px;
     margin-left: 20px;
   }
-  .nav-sub img {
-    border: 1px solid black;
-  }
+  
   .nav-sub {
-    padding: 2px;
+    /* padding: 2px; */
   }
   /* Login CSS styles */
   .card-collect {
