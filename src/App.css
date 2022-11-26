@@ -27,6 +27,9 @@
 .h100{
   height: 88vh;
 }
+.jusSpc{
+  justify-content: space-evenly;
+}
 /* Navbar CSS styles  */
 
 .Nav {
@@ -124,6 +127,7 @@
     flex-wrap: wrap;
     /* color: lightblue; */
     padding-inline: 10px;
+    margin-top: 40px;
   }
   .S-Bar {
     /* background-color: black; */
@@ -157,6 +161,9 @@
     width: 160px;
     height: 160px;
   }
+  .car4{
+    
+  }
   .select {
     padding-left: 20px;
   }
@@ -183,7 +190,7 @@
 
   /* Map part css */
   .Map {
-    width: 88%;
+    width: 32vw;
     height: 64vh;
     /* background-color: black; */
     border-radius: 8px;

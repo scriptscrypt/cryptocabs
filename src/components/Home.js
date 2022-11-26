@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 import { Card, Image } from "@mantine/core";
 import imgUser from "../assets/images/imgUser.png"
-import imgDriver from "../assets/images/imgDriver.webp"
+import imgDriver from "../assets/images/imgDriver.png"
 export default function Home() {
 
   return (

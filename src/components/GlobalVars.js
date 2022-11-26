@@ -1,6 +1,7 @@
 import {ethers} from "ethers"
 import {varContractAbi} from "./ContractABI"
 
+export const globalEthers = ethers;
 export const varContractAddress = "0xAc40c9C8dADE7B9CF37aEBb49Ab49485eBD3510d"
 export const globalProvider = new ethers.providers.Web3Provider(window.ethereum)
 export const globalSigner = globalProvider.getSigner() 
