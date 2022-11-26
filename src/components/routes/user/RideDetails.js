@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Autocomplete, Badge, Modal } from "@mantine/core";
+import { Autocomplete, Badge, Group, Modal, Rating } from "@mantine/core";
 import { Button } from "@mantine/core";
 import imgCar1 from "../../../assets/images/imgCar1.png"
 import imgCar2 from "../../../assets/images/imgCar2.png"
@@ -21,13 +21,15 @@ export default function RideDetails() {
     const [stWalAddress, setStWalAddress] = useState("0x")
 
     const [stCurLatitude, setStCurLatitude] = useState("0")
-    const [stAmount, setStAmount] = useState("32")
+    const [stAmount, setStAmount] = useState("0.0032")
     const [stCurLongitude, setStCurLongitude] = useState("0")
     const [opened, setOpened] = useState(false);
 
     const refFrom = useRef("FromDefault") 
     const refTo = useRef("ToDefault")
-    
+    const [stOpenedErr, setStOpenedErr] = useState(false)
+    const [ stErr, setStErr] = useState("")
+    const [stRatingValue, setStRatingValue] = useState(0);
     function fnGetPrice (){
       setStAmount((Math.random() * 0.01 + 0.001 ).toFixed(4) )
       console.log(stAmount)
@@ -68,7 +70,7 @@ export default function RideDetails() {
     {/* Interacting with smart contracts */}
 
     {/* Ethersjs transaction initiation */}
-    const [tx, setTx] = useState("")
+    const [tx, setTx] = useState("0x")
 
       const fnSendEth = async () =>{
         try{
@@ -76,10 +78,14 @@ export default function RideDetails() {
                   to: varContractAddress,
                   value: globalEthers.utils.parseEther(stAmount)})
           )
+          console.log(tx)
         }
         catch(err){
           console.log(err)
+          setStErr(err)
           //Catch Errors or add other features
+          setStOpenedErr(true)
+
         }
       }
 
@@ -164,17 +170,41 @@ export default function RideDetails() {
     <Modal opened={opened} onClose={() => setOpened(false)} title="Confirm ride" >
       <div className="cf">
 
-      <div className="">
-        Transaction Processed on Ethereum : {globalContract.address}
+      <div className="m8 cf">
+        Transaction Processed on Ethereum Contract : 
+
+        <Badge m="sm" color={"orange"} size='xl' radius={"sm"}>
+            {`${(globalContract.address).slice(0,6)}...${(globalContract.address).slice(60, 64)}`}
+        </Badge>
+      </div>
+      <div className="cf">
+        The Transaction hash is : 
+        <Badge m="sm" size='xl' radius={"sm"}>
+          {tx.hash && `${(tx.hash).slice(0,6)}...${(tx.hash).slice(62, 66)}`}
+        </Badge>
       </div>
       <div className="">
-        {refFrom.current.value} to {refTo.current.value}
+        Please rate the driver :
+
+        <Rating m="sm" defaultValue={2} value={stRatingValue} onChange={setStRatingValue}  />
       </div>
-      <Button onClick={fnSendEth}>Pay Now</Button>
-       {/* {stAmount} */}
-    
+
+        <Group m="sm">
+          <Button onClick={()=> setOpened(false)}>Cancel ride</Button>
+          <Button onClick={fnSendEth}>Pay Now</Button>
+          <a href={`https://goerli.etherscan.io/tx/${tx.hash}`}> Verify on etherscan </a>
+          
+        </Group>
+
       </div>
     </Modal>
+
+  {/* Error modal */}
+
+  <Modal opened={stOpenedErr} onClose={() => setStOpenedErr(false)} title="Error" >
+        {stErr.message}
+
+  </Modal>
 
 
 

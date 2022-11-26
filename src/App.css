@@ -30,6 +30,9 @@
 .jusSpc{
   justify-content: space-evenly;
 }
+.m8{
+  margin: 8px;
+}
 /* Navbar CSS styles  */
 
 .Nav {

@@ -56,7 +56,7 @@ export default function DriverReputation() {
       <div className="Track">
         <div className="Track-container">
             <div className="TrackDe">
-            <h2> Orders Placed</h2>
+            <h2> Driver Details</h2>
           </div>
           <div className="TrackSt">
             <RingProgress
@@ -72,7 +72,7 @@ export default function DriverReputation() {
 
         <div className="Track-container">
           <div className="TrackDe">
-            <h2> Orders Recived</h2>
+            <h2> Custumer interaction</h2>
           </div>
           <div className="TrackSt">
             <RingProgress
@@ -88,7 +88,7 @@ export default function DriverReputation() {
 
         <div className="Track-container">
           <div className="TrackDe">
-            <h2>Total Orders</h2>
+            <h2>Rejection Rate of Driver</h2>
           </div>
           <div className="TrackSt">
             <RingProgress
@@ -107,7 +107,7 @@ export default function DriverReputation() {
         <Badge radius="sm" size="lg">Reputation Score - 987</Badge>
     </div>
     <div className="">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero quam vel, aliquid voluptates nam explicabo perferendis voluptatem saepe quasi voluptatum ipsa veritatis laborum delectus quaerat? Dicta veniam est earum blanditiis!
+      
     </div>
 
     </>
