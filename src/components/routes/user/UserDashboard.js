@@ -10,7 +10,7 @@ export default function UserDashboard() {
   return (
     <>
     <Navbar/>
-      Component - UserDashboard.js   
+      {/* Component - UserDashboard.js    */}
 
       <RideDetails/>
       <Outlet />

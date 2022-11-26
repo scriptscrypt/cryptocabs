@@ -3,7 +3,7 @@ import { Button, Divider } from "@mantine/core";
 import "../../src/App.css";
 import { Link } from "react-router-dom";
 import imgLanding from "../assets/images/imgLanding.jpg"
-
+import logo from "../assets/logos/logo.png"
 
 
 function LaunchPage() {
@@ -14,8 +14,8 @@ function LaunchPage() {
         {/* Navbar Start*/}
     <div className="Nav">
       <div className="logo">
-        {/* <img src="" alt="logo" /> */}
-        <h3>Logo</h3>
+        <img src={logo} alt="logo" className="imgH32" />
+        {/* <h3>Logo</h3> */}
       </div>
 
       <div className="launch">

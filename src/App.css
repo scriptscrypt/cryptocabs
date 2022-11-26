@@ -8,11 +8,24 @@
   justify-content:center;
   align-items:center;
 }
+.cf{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
 .btn{
   padding:8px 16px;
   border-radius: 8px;
   background-color: orange;
   width: fit-content;
+}
+
+.imgH32{
+  height: 32px;
+}
+.h100{
+  height: 88vh;
 }
 /* Navbar CSS styles  */
 
@@ -101,3 +114,153 @@
   .card {
     padding: 20px;
   }
+
+  /*Ridedetails.js */
+  .M-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* color: lightblue; */
+    padding-inline: 10px;
+  }
+  .S-Bar {
+    /* background-color: black; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    margin:8px;
+
+  }
+  /* .intro {
+    padding-left: 20px;
+  }
+  .trip {
+    padding-left: 20px;
+  }
+  .From {
+    padding-left: 20px;
+  } */
+  .To {
+    /* padding-left: 20px;
+    padding-bottom: 25px; */
+  
+  }
+  .p8{
+    padding: 8px;
+  }
+  .img160{
+    width: 160px;
+    height: 160px;
+  }
+  .select {
+    padding-left: 20px;
+  }
+  .Vehicle {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    overflow-x: scroll;
+
+  }
+  .img1 :hover {
+    box-shadow: 2px 0px 1px 0px #404040;
+    cursor: pointer;
+  }
+  .Auto img {
+    border-radius: 8px;
+  }
+  .Car img {
+    border-radius: 8px;
+  }
+  .confirm {
+    padding-left: 20px;
+  }
+
+  /* Map part css */
+  .Map {
+    width: 88%;
+    height: 64vh;
+    /* background-color: black; */
+    border-radius: 8px;
+    /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25); */
+    padding-left: 10px;
+  }
+  
+  .mantine-gqmpge {
+    font-size: 20px;
+    /* width: 80%; */
+    /* color: #1a1a1a; */
+    text-align: left;
+    min-height: 38px;
+    border-radius: 4px;
+  }
+  .mantine-ittua2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    /* color: lightblue; */
+    word-break: break-word;
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mantine-1m3pqry {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+      Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    line-height: 3.55;
+    color: lightblue;
+  }
+
+
+  /*DriverReputation.js*/
+  /* Rating styles */
+.Stat {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box img {
+  width: 100%;
+  height: 40px;
+}
+.box-item b {
+  font-size: x-large;
+}
+.box {
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+}
+.box-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.RideD {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Track {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 1px;
+  column-gap: 10px;
+}
+.Track-container {
+  box-shadow: 1px 1px rgba(126, 126, 126, 0.25);
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+}

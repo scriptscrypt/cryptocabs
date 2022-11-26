@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { Card, Image } from "@mantine/core";
-
+import imgUser from "../assets/images/imgUser.png"
+import imgDriver from "../assets/images/imgDriver.webp"
 export default function Home() {
 
   return (
@@ -14,10 +15,10 @@ export default function Home() {
         <div className="card">
           <Card shadow="sm" p="lg" radius="xl" withBorder>
             <Card.Section >
-            <Link to="/user">
+            <Link to="/user/auth">
                 {/* User Image here */}
                 <Image
-                  src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                  src={imgUser}
                   height={300}
                   alt="User"
                   />
@@ -29,10 +30,10 @@ export default function Home() {
         <div className="card">
           <Card shadow="sm" p="lg" radius="xl" withBorder>
             <Card.Section >
-            <Link to="/driver">    
+            <Link to="/driver/auth">    
                 {/* Driver image here */}
                 <Image
-                  src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                  src={imgDriver}
                   height={300}
                   alt="Driver"
                   />

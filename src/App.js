@@ -7,6 +7,7 @@ import UserProfile from "./components/routes/user/UserProfile";
 
 import Home from "./components/Home"
 import LaunchPage from "./components/LaunchPage"
+import Auth from "./components/routes/user/Auth";
 
 function App() {
   return (
@@ -22,13 +23,13 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home/>} />
               <Route path="/user" element={<UserDashboard/>} />
+                <Route path="/user/auth" element={<Auth/>} />
                 <Route path="/user/bookride" element={<RideDetails />} />
                 <Route path="/user/previousrides" element={<PreviousRides />} />
                 <Route path="/user/userprofile" element={<UserProfile />} />  
          
             <Route path="/driver" element={<DriverDashboard/>}>
             </Route>
-
           <Route path="/" element={<LaunchPage/>}>
           </Route>
         </Routes>
