@@ -72,7 +72,7 @@ export default function DriverReputation() {
 
         <div className="Track-container">
           <div className="TrackDe">
-            <h2> Custumer interaction</h2>
+            <h2> Customer interaction</h2>
           </div>
           <div className="TrackSt">
             <RingProgress

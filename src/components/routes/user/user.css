@@ -1,0 +1,106 @@
+.Image img {
+    height: 25px;
+    width: 25px;
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+  
+  .Address {
+    height: 25px;
+    width: 160px;
+    background-color:#6495ED;
+  }
+  
+  .dets {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content:flex-end; */
+    background-color: #6495ED;
+    height: 35px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 12px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    align-items: center;
+  }
+  
+  .opts {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+  
+  #X {
+    height: 30px;
+    margin-left: 60px;
+  }
+  
+  .userpic {
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    border-radius: 18px;
+  }
+  
+  .alligning {
+    /* display: flex; */
+  }
+  
+  .FSB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ethimage img {
+    height: 40px;
+    width: 40px;
+    border-radius: 75%;
+    padding: 15px;
+  }
+  
+  .ethimage {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  
+  .LB {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .SSB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 101, 4);
+  }
+  
+  .RB {
+    margin-left: 65px;
+  }
+  
+  .LB h3 {
+    margin-bottom: 0px;
+  }
+  
+  .SSB {
+    background-color : lightskyblue;
+    margin-top: 15px;
+    width: 344px;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+  }
+  
+  .Maindiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+  }

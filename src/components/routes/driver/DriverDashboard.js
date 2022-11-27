@@ -7,7 +7,6 @@ export default function DriverDashboard() {
   return (
     <>   
     <Navbar/>
-        Component - DriverDashboard.js 
       <DriverReputation/>
     </>
   )

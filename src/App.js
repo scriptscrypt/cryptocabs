@@ -3,7 +3,7 @@ import PreviousRides from "./components/routes/user/PreviousRides";
 import RideDetails from "./components/routes/user/RideDetails";
 import DriverDashboard from "./components/routes/driver/DriverDashboard";
 import UserDashboard from "./components/routes/user/UserDashboard";
-import UserProfile from "./components/routes/user/UserProfile";
+import UserProfileUpdated from "./components/routes/user/UserProfileUpdated";
 
 import Home from "./components/Home"
 import LaunchPage from "./components/LaunchPage"
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/user/auth" element={<UserAuth/>} />
                 <Route path="/user/bookride" element={<RideDetails />} />
                 <Route path="/user/previousrides" element={<PreviousRides />} />
-                <Route path="/user/userprofile" element={<UserProfile />} />  
+                <Route path="/user/userprofile" element={<UserProfileUpdated />} />  
          
                 <Route path="/driver/auth" element={<DriverAuth/>} />
                 <Route path="/driver" element={<DriverDashboard/>}>

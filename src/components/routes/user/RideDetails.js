@@ -192,7 +192,7 @@ export default function RideDetails() {
         <Group m="sm">
           <Button onClick={()=> setOpened(false)}>Cancel ride</Button>
           <Button onClick={fnSendEth}>Pay Now</Button>
-          <a href={`https://goerli.etherscan.io/tx/${tx.hash}`}> Verify on etherscan </a>
+          <a target="_blank" href={`https://goerli.etherscan.io/tx/${tx.hash}`}> Verify on etherscan </a>
           
         </Group>
 
