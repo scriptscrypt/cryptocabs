@@ -104,7 +104,7 @@ export default function DriverReputation() {
       </div>
     </div>
     <div className="cf"> 
-        <Badge radius="sm" size="lg">Reputation Score - 987</Badge>
+        <Badge radius="sm" m="lg" size="xl">Reputation Score - 987</Badge>
     </div>
     <div className="">
       
